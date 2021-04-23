@@ -1,7 +1,0 @@
-{
-  "name": "TestSWSpec",
-  "description": "ML on Python 3.6",
-  "base_software_specification": {
-    "guid": ">>>BASE_SW_SPEC_ID<<<"
-  }
-}

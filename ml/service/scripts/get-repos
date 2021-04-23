@@ -1,3 +1,0 @@
-#!/bin/bash
-
-cat $1 | sed -n '/<repositories>/,$p' | sed '/<\/repositories>/,$ d' | grep url | grep -v 'SEE MIRROR' | sed -e "s/      <url>//g" | sed -e "s/<\/url>//g"

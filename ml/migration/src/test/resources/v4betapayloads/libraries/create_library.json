@@ -1,9 +1,0 @@
-{
-  "name": "v4-repo-test-library->>>UUID<<<",
-  "description": "Sample custom library",
-  "version": "1.0",
-  "platform": {
-    "name": "python",
-    "versions": ["3.6"]
-  }
-}
