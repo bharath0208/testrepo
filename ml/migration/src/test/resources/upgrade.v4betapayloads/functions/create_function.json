@@ -1,0 +1,42 @@
+{
+  "tags": [
+    {
+      "value": "string",
+      "description": "string"
+    }
+  ],
+  ">>>CONTAINER_NAME<<<": {
+      "id": ">>>CONTAINER_ID<<<"
+  },
+  "runtime": {
+    "href": ">>>RUNTIME_HREF<<<"
+  },
+  "name": "Python_scoring",
+  "type": "python",
+  "description": "Python function for scoring",
+  "custom": {},
+  "sample_scoring_input": {
+    "input_data": [
+      {
+    	"id": "id1",
+        "fields": [
+          "name",
+          "age",
+          "occupation"
+        ],
+        "values": [
+          [
+            "john",
+            23,
+            "student"
+          ],
+          [
+            "paul",
+            33,
+            "engineer"
+          ]
+        ]
+      }
+    ]
+  }
+}

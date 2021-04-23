@@ -1,0 +1,15 @@
+.idea
+target
+**/*.iml
+*.iml
+.DS_Store
+*.env
+/local.conf
+/local-private.conf
+/local-migration.conf
+logs
+/log4j2.xml
+/service/docker/target/
+/docker.zip
+/project/
+**/jmeter.log

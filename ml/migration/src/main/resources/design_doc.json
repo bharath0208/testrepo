@@ -1,0 +1,32 @@
+{
+  "_id": "_design/design_doc",
+  "language": "javascript",
+  "views": {
+    "list-job-by-userid": {
+      "map": "function (doc) {\n    emit(doc.user_id, doc)\n}"
+    },
+    "list-job-by-status": {
+      "map": "function (doc) {\n        emit(doc.status, doc);\n}"
+    },
+    "get-next-job": {
+      "map": "function (doc) {\n  if(doc.status == \"pending\") {\n    emit(doc._id, {\n      created_at : doc.created_at,\n      id: doc._id\n    })\n  }\n}",
+      "reduce": "function (keys, values, rereduce) {\n  \n  function findMin(arr) {\n    var min = arr[0].created_at;\n    var index = 0;\n    var len = arr.length;\n    for (var i = 1; i < len; i++) {\n      var v = arr[i].created_at;\n      if(v < min) {\n        min = v;\n        index = i;\n      }\n    }\n    return index;\n  }\n  \n  if (rereduce) {\n    return values[findMin(values)];\n  } else {\n    return values[findMin(values)];\n  }\n}"
+    },
+    "get-running-jobs": {
+      "map": "function (doc) {\n  if(doc.status == \"initializing\" || doc.status == \"running\") {\n      emit(doc.status, doc);\n  }\n}"
+    },
+    "get-non-terminated-jobs": {
+      "map": "function (doc) {\n  if(doc.status == \"initializing\" || doc.status == \"pending\" || doc.status == \"running\") {\n      emit(doc.status, doc);\n  }\n}"
+    },
+    "list-job-by-project-id": {
+      "map": "function (doc) {\n    emit(doc.project_id, doc)\n}"
+    },
+    "list-job-by-space-id": {
+      "map": "function (doc) {\n    emit(doc.space_id, doc)\n}"
+    },
+    "count-job-by-status": {
+      "reduce": "_count",
+      "map": "function (doc) {\n  emit(doc.status, 1);\n}"
+    }
+  }
+}

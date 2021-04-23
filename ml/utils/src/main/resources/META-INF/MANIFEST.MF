@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Specification-Version: ${ml.repository.api.version}
+Implementation-Version: ${project.version}
+Main-Class: ${main.class}

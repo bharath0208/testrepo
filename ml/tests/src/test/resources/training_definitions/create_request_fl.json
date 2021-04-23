@@ -1,0 +1,44 @@
+{
+  "tags": [
+    "testKey",
+    "testValue"
+  ],
+  ">>>CONTAINER_TYPE<<<": ">>>CONTAINER_ID<<<",
+  "name": ">>>ASSET_NAME<<<",
+  "description": "test td",
+  "custom": {
+    "test": "hi"
+  },
+  "federated_learning": {
+    "fusion_type": "xgb_classifier",
+    "learning_rate": 0.1,
+    "loss": "binary_crossentropy",
+    "max_bins": 255,
+    "rounds": 2,
+    "metrics": "loss",
+    "verbose": true,
+    "remote_training" : {
+      "quorum": 1.0,
+      "remote_training_systems": [ { "id" : "$rts_one", "required" : true  } ]
+    },
+    "hardware_spec": {
+      "name": "XXS"
+    }
+  },
+  "training_data_references": [
+    {
+      "type": "data_asset",
+      "connection": {
+        "x": {}
+      },
+      "location": {
+        "id":">>>DATA_ASSET_ID<<<"
+      }
+    }
+  ],
+  "results_reference": {
+    "type": "s3",
+    "connection": {},
+    "location": {}
+  }
+}

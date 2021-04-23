@@ -1,0 +1,101 @@
+{
+  "tags": [
+    {
+      "value": "tag1",
+      "description": "description1"
+    }
+  ],
+  "name": "name1",
+  "description": "some description here1",
+  "custom": {},
+  ">>>CONTAINER_NAME<<<": {
+    "id": ">>>CONTAINER_ID<<<"
+  },
+  "document": {
+    "doc_type": "pipeline",
+    "version": "2.0",
+    "primary_pipeline": "dlaas_only",
+    "pipelines": [
+      {
+        "id": "dlaas_only",
+        "runtime_ref": "hybrid",
+        "nodes": [
+          {
+            "id": "training",
+            "type": "model_node",
+            "op": "dl_train",
+            "runtime_ref": "DL",
+            "inputs": [
+            ],
+            "outputs": [],
+            "parameters": {
+              "name": "tf-mnist",
+              "description": "Simple MNIST model implemented in TF",
+              "command": "python3 convolutional_network.py --trainImagesFile ${DATA_DIR}/train-images-idx3-ubyte.gz --trainLabelsFile ${DATA_DIR}/train-labels-idx1-ubyte.gz --testImagesFile ${DATA_DIR}/t10k-images-idx3-ubyte.gz --testLabelsFile ${DATA_DIR}/t10k-labels-idx1-ubyte.gz --learningRate 0.001 --trainingIters 6000",
+              "training_lib_href": "/v4/libraries/>>>LIBRARY_ID<<<",
+              "compute": {
+                "name": "k80",
+                "nodes": 1
+              },
+              "target_bucket": "wml-training-fvt-output"
+            }
+          }
+        ]
+      }
+    ],
+    "schemas": [
+      {
+        "id": "schema1",
+        "fields": [
+          {
+            "name": "text",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "runtimes": [
+      {
+        "id": "DL",
+        "name": "tensorflow",
+        "version": "1.15-py3.6"
+      },
+      {
+        "id": "DL2",
+        "name": "tensorflow",
+        "version": "1.15",
+        "app_data": {
+          "wml_data": {
+            "runtime_spec": {
+              "language": {
+                "name": "python",
+                "version": "3.6"
+              },
+              "libraries": [
+                {
+                  "name": "keras",
+                  "version": "2.1.3"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "automl",
+        "name": "auto_ai.kb",
+        "version": "1.2.3",
+        "app_data": {
+          "wml_data": {
+            "runtime_spec_v4": {
+              "compute": {
+                "name": "m",
+                "nodes": 1
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

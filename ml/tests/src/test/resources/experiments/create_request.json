@@ -1,0 +1,23 @@
+{
+  ">>>CONTAINER_TYPE<<<": ">>>CONTAINER_ID<<<",
+  "name": ">>>ASSET_NAME<<<",
+  "description": "string",
+  "label_column": "string",
+  "custom": {},
+  "evaluation_definition": {
+    "method": "binary",
+    "metrics": [
+      {
+        "name": "areaUnderROC",
+        "maximize": true
+      },
+      {
+        "name": "precision",
+        "maximize": false
+      },
+      {
+        "name": "recall"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "test_space_>>>UUID<<<",
+  "_id": ">>>CONTAINER_ID<<<",
+  "is_default": "false",
+  "description": "SVT space",
+  "tags": [
+    {
+      "value": "svt_resource",
+      "description": "Resource created by SVT automation"
+    }
+  ],
+  "api_version": "4.0",
+  "provenance": {},
+  "modelCtrl": {
+    "kind": "spaces",
+    "version": "1.0",
+    "tenantId": "999",
+    "createdAt": "2020-08-29T10:00:07.378Z"
+  },
+  "modifiedAt": "2020-08-29T10:00:18.444Z"
+}

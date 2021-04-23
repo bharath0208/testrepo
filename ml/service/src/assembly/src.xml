@@ -1,0 +1,23 @@
+<!--
+  ~ IBM Confidential
+  ~ OCO Source Materials
+  ~ (C) Copyright IBM Corp. 2017-2020
+  ~
+  ~ The source code for this program is not published or otherwise divested of its trade secrets,
+  ~ irrespective of what has been deposited with the U.S. Copyright Office.
+  -->
+
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+  <id>dependencies</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <files>
+    <file>
+      <source>${project.build.directory}/libraries.txt</source>
+      <lineEnding>keep</lineEnding>
+      <filtered>false</filtered>
+    </file>
+  </files>
+</assembly>

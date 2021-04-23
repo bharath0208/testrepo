@@ -1,0 +1,15 @@
+{
+  "name": ">>>ASSET_NAME<<<",
+  ">>>CONTAINER_TYPE<<<": ">>>CONTAINER_ID<<<",
+  "software_spec" : {
+    "id": ">>>SW_SPEC_ID<<<"
+  },
+  "schemas": {
+    "input": [
+      { "id": "t1", "name": "Tasks", "fields": [ { "name": "duration", "type": "number" } ] }
+    ],
+    "output": [
+      { "id": "t1", "name": "Tasks", "fields": [ { "name": "duration", "type": "number" } ] }
+    ]
+  }
+}

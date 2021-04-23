@@ -1,0 +1,21 @@
+{
+  "tags": [
+    {
+      "value": "svt_resource",
+      "description": "Resource created by SVT automation"
+    }
+  ],
+  "type": "tensorflow_1.15",
+  "name": "automl_Height",
+  "description": "SVT v4 automl pipeline",
+  "custom": {},
+  "runtime": {
+    "href": ">>>RUNTIME_HREF<<<"
+  },
+  "pipeline": {
+    "href": ">>>PIPELINE_HREF<<<"
+  },
+  "hyper_parameters": {
+    "name": "value"
+  }
+}

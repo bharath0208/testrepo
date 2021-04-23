@@ -1,0 +1,31 @@
+{
+  "tags": [
+    "testKey",
+    "testValue"
+  ],
+  ">>>CONTAINER_TYPE<<<": ">>>CONTAINER_ID<<<",
+  "name": ">>>ASSET_NAME<<<",
+  "description": "test td",
+  "custom": {
+    "test": "hi"
+  },
+  "experiment": {
+    "id": ">>>EXPERIMENT_ID<<<"
+  },
+  "training_data_references": [
+    {
+      "type": "data_asset",
+      "connection": {
+        "x": {}
+      },
+      "location": {
+        "id":">>>DATA_ASSET_ID<<<"
+      }
+    }
+  ],
+  "results_reference": {
+    "type": "s3",
+    "connection": {},
+    "location": {}
+  }
+}

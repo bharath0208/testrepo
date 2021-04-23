@@ -1,0 +1,24 @@
+{
+  "name": ">>>ASSET_NAME<<<",
+  "description": "This is a test remote training system.",
+  ">>>CONTAINER_TYPE<<<": ">>>CONTAINER_ID<<<",
+  "tags": [
+    "t1",
+    "t2"
+  ],
+  "allowed_identities": [
+    {
+      "id": "hjsdgwsdtyt",
+      "type": "user"
+    }
+  ],
+  "organization": {
+    "name": "Test Ltd",
+    "region": "EU"
+  },
+  "remote_admin": {
+    "id": "hjsdgwsdtyt",
+    "type": "user"
+  },
+  "custom": {}
+}

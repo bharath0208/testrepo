@@ -1,0 +1,11 @@
+{
+  "name": "v4-repo-project-test-icp->>>UUID<<<",
+  "description": "A project description.",
+  "generator": "Postman",
+  "public": false,
+  "enforce_members": true,
+  "storage": {
+    "type": "assetfiles",
+    "guid": ">>>UUID<<<"
+  }
+}

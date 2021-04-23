@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this is the log configuration for the test code -->
+<Configuration status="WARN">
+  <Properties>
+    <Property name="filename">target/tests.log</Property>
+  </Properties>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <!-- %d %p %C{1.} [%t] %m%n -->
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %X{Request-ID} %-5level %F:%L - %msg%n"/>
+    </Console>
+    <File name="File" fileName="${filename}">
+      <PatternLayout>
+        <Pattern>%d|%X{Request-ID}|%p|%C|%F:%L| %m%n</Pattern>
+      </PatternLayout>
+    </File>
+  </Appenders>
+  <Loggers>
+    <Root level="TRACE">
+      <AppenderRef ref="Console" level="WARN"/>
+      <AppenderRef ref="File" level="TRACE"/>
+    </Root>
+  </Loggers>
+</Configuration>

@@ -1,0 +1,45 @@
+{
+  "tags": [
+    "testKey",
+    "testValue"
+  ],
+  ">>>CONTAINER_TYPE<<<": ">>>CONTAINER_ID<<<",
+  "name": ">>>ASSET_NAME<<<",
+  "description": "test deployment job definition",
+  "custom": {
+    "test": "hi"
+  },
+  "deployment": {
+    "id": "1223"
+  },
+  "scoring": {
+    "input_data_references":[
+      {
+        "type": "data_asset",
+        "connection": {
+          "x": {}
+        },
+        "location": {
+          "id":">>>DATA_ASSET_ID<<<"
+        }
+      }
+    ]
+  },
+  "hardware_spec": {
+    "id": ">>>HW_SPEC_ID<<<",
+    "rev": "12",
+    "name": "string",
+    "num_nodes": 2
+  },
+  "hybrid_pipeline_hardware_specs": [
+    {
+      "node_runtime_id": "autoai.kb",
+      "hardware_spec": {
+        "id": ">>>HW_SPEC_ID<<<",
+        "rev": "12",
+        "name": "string",
+        "num_nodes": 2
+      }
+    }
+  ]
+}

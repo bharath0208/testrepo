@@ -1,0 +1,39 @@
+{
+  ">>>CONTAINER_TYPE<<<": ">>>CONTAINER_ID<<<",
+  "name": ">>>ASSET_NAME<<<",
+  "description": "string",
+  "label_column": "string",
+  "custom": {},
+  "evaluation_definition": {
+    "method": "binary",
+    "metrics": [
+      {
+        "name": "areaUnderROC",
+        "maximize": true
+      },
+      {
+        "name": "precision",
+        "maximize": false
+      },
+      {
+        "name": "recall"
+      }
+    ]
+  },
+  "training_references": [
+    {
+      "pipeline": {
+        "id": ">>>PIPELINE_ID<<<",
+        "hardware_spec": {
+          "name": ">>>HW_SPEC_NAME<<<"
+        }
+      },
+      "model_definition": {
+        "id": ">>>MODEL_DEF_ID<<<",
+        "software_spec": {
+          "name": ">>>SW_SPEC_NAME<<<"
+        }
+      }
+    }
+  ]
+}

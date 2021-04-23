@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this is the log configuration for the test code -->
+<Configuration status="WARN">
+  <Properties>
+    <Property name="filename">target/tests.log</Property>
+  </Properties>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <!-- %d %p %C{1.} [%t] %m%n -->
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %F:%L - %msg%n"/>
+    </Console>
+    <File name="File" fileName="${filename}">
+      <PatternLayout>
+        <Pattern>%d %p %C %F:%L %m%n</Pattern>
+      </PatternLayout>
+    </File>
+    <!-- this is a file for access logging -->
+    <File name="AccessFile" fileName="target/tests-http-access.log">
+      <PatternLayout>
+        <Pattern>%m%n</Pattern>
+      </PatternLayout>
+    </File>
+  </Appenders>
+  <Loggers>
+    <Logger name="http-access" level="DEBUG" additivity="false">
+      <AppenderRef ref="AccessFile"/>
+    </Logger>
+    <Root level="TRACE">
+      <AppenderRef ref="Console" level="WARN"/>
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+</Configuration>

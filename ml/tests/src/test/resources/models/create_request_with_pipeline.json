@@ -1,0 +1,37 @@
+{
+  "name": ">>>ASSET_NAME<<<",
+  ">>>CONTAINER_TYPE<<<": ">>>CONTAINER_ID<<<",
+  "pipeline":{
+    "id":">>>PIPELINE_ID<<<"
+  },
+  "software_spec" : {
+    "id": ">>>SW_SPEC_ID<<<"
+  },
+  "type": "tensorflow_1.15",
+  "schemas": {
+    "input": [
+      {
+        "fields": [
+          {
+            "name": "duration",
+            "type": "number"
+          }
+        ],
+        "id": "t1",
+        "name": "Tasks"
+      }
+    ],
+    "output": [
+      {
+        "fields": [
+          {
+            "name": "duration",
+            "type": "number"
+          }
+        ],
+        "id": "t1",
+        "name": "Tasks"
+      }
+    ]
+  }
+}

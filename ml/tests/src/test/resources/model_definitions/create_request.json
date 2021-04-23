@@ -1,0 +1,13 @@
+{
+  "name": ">>>ASSET_NAME<<<",
+  ">>>CONTAINER_TYPE<<<": ">>>CONTAINER_ID<<<",
+  "version": ">>>MODEL_VERSION<<<",
+  "platform": {
+    "name": ">>>PLATFORM_NAME<<<",
+    "versions": [
+      "string"
+    ]
+  },
+  "command": "cmd",
+  "custom": {}
+}

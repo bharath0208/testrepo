@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "name": "postman1",
+    "asset_type": "wml_model_definition",
+    "origin_country": "us",
+    "rov": {
+      "mode": 0
+    },
+    "asset_category": "USER"
+  },
+  "entity": {
+    "wml_model_definition": {
+      "name": "tf model def with platform",
+      "version": "1.0",
+      "command": "convolutional_network.py --trainImagesFile train-images-idx3-ubyte.gz --trainLabelsFile train-labels-idx1-ubyte.gz --testImagesFile t10k-images-idx3-ubyte.gz --testLabelsFile t10k-labels-idx1-ubyte.gz --learningRate 0.001 --trainingIters 6000",
+      "platform": {
+        "name": "python",
+        "versions": [
+          "3.6"
+        ]
+      },
+      ">>>CONTAINER_NAME<<<": {
+        "id": ">>>CONTAINER_ID<<<"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name":"v4-repo-test-project->>>UUID<<<",
+  "storage": {
+    "type": "bmcos_object_storage",
+    "guid": ">>>RESOURCE_CRN_GUID<<<",
+    "resource_crn": ">>>RESOURCE_CRN<<<",
+    "delegated": false
+  },
+  "generator":"Projects-API_Swagger-Docs"
+}
